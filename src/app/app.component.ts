@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'WOW ANGULAR 4';
+  angularVersion = 4;
+  isAngular4 = this.angularVersion ===4;
 }

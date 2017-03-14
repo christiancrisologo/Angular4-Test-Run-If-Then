@@ -1,3 +1,38 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+	<div class="page-header row">
+		<h3> Check if is Angular 4</h3>
+	</div>
+	<div class="col-md-6">
+
+		<div class="panel panel-default  ">
+			<div class="panel-heading"><strong>Check if you have Angular 4</strong></div>
+			<div class="panel-body">
+
+				<div *ngIf="isAngular4; then angular4template else notAngular4template"></div>
+				<ng-template #angular4template>
+					<span class="glyphicon glyphicon-thumbs-up"></span> YES, it's angular 4
+				</ng-template>
+				<ng-template #notAngular4template>
+					<span class="glyphicon glyphicon-thumbs-down"></span> NO , it's not angular 4
+				</ng-template>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading"><strong> Check the version number if its #4</strong></div>
+			<div class="panel-body">
+				<div *ngIf="angularVersion===4; then angularVersion4 else notAngularVersion4" class="label label-default"></div>
+				<ng-template #angularVersion4>
+					<span class="glyphicon glyphicon-thumbs-up"></span> YES, you got angular version {{angularVersion}}
+				</ng-template>
+				<ng-template #notAngularVersion4>
+					<span class="glyphicon glyphicon-thumbs-down"></span> NO , you got angular version {{angularVersion}}
+				</ng-template>
+			</div>
+		</div>
+	</div>
+
+</div>
